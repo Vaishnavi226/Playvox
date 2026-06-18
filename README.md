@@ -108,24 +108,3 @@ Open `http://localhost:8000` in your web browser.
 
 ---
 
-## 📤 Pushing to GitHub
-
-To publish this project to your GitHub repository, run the following commands in your terminal:
-
-```bash
-# Initialize git repository (if not already done)
-git init
-
-# Add files to staging area
-git add .
-
-# Create your initial commit
-git commit -m "feat: initial commit for Playvox music player"
-
-# Add your remote repository origin
-git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git
-
-# Set default branch to main and push
-git branch -M main
-git push -u origin main
-```
