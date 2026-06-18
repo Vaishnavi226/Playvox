@@ -1,0 +1,13 @@
+# VS Code config
+.vscode/
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
+# System/Backup files
+*.tmp
+*.bak
