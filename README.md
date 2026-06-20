@@ -7,6 +7,7 @@
 
 Playvox is a premium, web-based music application inspired by Spotify's dark-mode design. It streams high-quality independent music dynamically from the **Jamendo Developer API**, supports custom range progress bars, full playback queues (Shuffle, Repeat, Next/Prev), search filters, and persists user listening history across browser reloads using local storage.
 
+
 ---
 
 ## 🎨 Interface Preview
