@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
@@ -20,7 +20,26 @@
   <!-- Navbar -->
   <nav>
     <div class="left-half">
-      <div class="logo"><i class="fa-brands fa-spotify"></i></div>
+      <div class="logo" style="display: flex; align-items: center; gap: 0.6rem;">
+        <svg width="34" height="34" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink: 0;">
+          <circle cx="50" cy="50" r="46" stroke="#9d4edd" stroke-width="6" fill="#040306"/>
+          <!-- Sound wave bars -->
+          <rect x="25" y="42" width="6" height="16" rx="3" fill="#9d4edd"/>
+          <rect x="35" y="34" width="6" height="32" rx="3" fill="#9d4edd"/>
+          <rect x="45" y="26" width="6" height="48" rx="3" fill="#9d4edd"/>
+          <!-- Play triangle -->
+          <path d="M 57 31 C 57 29.5 58.7 28.5 60 29.5 L 84 47.5 C 85.3 48.5 85.3 51.5 84 52.5 L 60 70.5 C 58.7 71.5 57 70.5 57 69 L 57 31 Z" fill="url(#logo-grad)"/>
+          <defs>
+            <linearGradient id="logo-grad" x1="57" y1="28" x2="84" y2="70" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#b86ff8"/>
+              <stop offset="100%" stop-color="#9d4edd"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <span style="font-family: 'Inter', sans-serif; font-size: 1.3rem; font-weight: 900; letter-spacing: 0.05em; text-transform: uppercase; user-select: none;">
+          <span style="color: #ffffff;">Play</span><span style="color: #9d4edd;">vox</span>
+        </span>
+      </div>
       <div class="home-icon"><i class="fa-solid fa-house"></i></div>
       <div class="search-bar">
         <div class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
@@ -29,15 +48,15 @@
       </div>
     </div>
     <div class="right-half">
-      <div class="right-half-p1">
-        <p class="nav-text">Premium</p>
-        <p class="nav-text">Support</p>
-        <p class="nav-text">Download</p>
+      <!-- Guest State -->
+      <div id="auth-guest-state" class="right-half-p2">
+        <div class="nav-text" id="signup-btn" style="cursor: pointer;">Sign up</div>
+        <button class="login-btn" id="login-btn">Log in</button>
       </div>
-      <div class="right-half-p2">
-        <div class="nav-text"><i class="fa-regular fa-circle-down"></i> Install App</div>
-        <div class="nav-text">Sign up</div>
-        <button class="login-btn">Log in</button>
+      <!-- Logged-in State -->
+      <div id="auth-logged-in-state" class="right-half-p2" style="display: none;">
+        <span id="user-display-name" class="nav-text" style="font-weight: 700;">Username</span>
+        <button class="login-btn" id="logout-btn" style="background-color: transparent; border: 1px solid white; color: white;">Log out</button>
       </div>
     </div>
   </nav>
@@ -47,21 +66,20 @@
     <div class="main-left-part">
       <div class="library">
         <p>Your Library</p>
-        <div>+</div>
+        <div id="create-playlist-sidebar-btn" title="Create Playlist" style="cursor: pointer;">+</div>
       </div>
 
       <div class="box-container">
-        <div class="box">
+        <!-- Guest / Empty State -->
+        <div class="box" id="empty-library-box">
           <h4>Create your first playlist</h4>
           <p>It's easy we'll help you</p>
-          <button>Create playlist</button>
+          <button id="create-playlist-btn">Create playlist</button>
         </div>
-        <div class="box">
-          <div class="box">
-            <h4>Let's find some podcast to follow</h4>
-            <p>We'll keep you updated on new updates</p>
-            <button>Browse podcasts</button>
-          </div>
+        
+        <!-- Playlists List -->
+        <div id="sidebar-playlists-list" class="sidebar-playlists-list" style="display: none;">
+          <!-- Dynamically populated playlist links -->
         </div>
       </div>
     </div>
@@ -69,129 +87,204 @@
     <!-- Main: right part -->
 
     <div class="main-right-part">
-      <div class="music-section" id="popular-section">
-        <h2 id="popular-header">Popular songs</h2>
-        <div class="songs">
-          <div class="music-card">
-            <img src="Images/1.jpg">
-            <div class="music-play-btn"><i id="1" class="playMusic fa-solid fa-circle-play"></i></div>
-            <div class="img-title">Guitar Song</div>
-            <div class="img-description">The best guitar music to relax your mind</div>
+      <!-- Default Home Song Grid View -->
+      <div id="home-view-container">
+        <div class="music-section" id="popular-section">
+          <h2 id="popular-header">Popular songs</h2>
+          <div class="songs">
+            <div class="music-card">
+              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23282828'/><path d='M40 30v40c-3 0-6 2-6 5s3 5 6 5 6-2 6-5V40l30-8v23c-3 0-6 2-6 5s3 5 6 5 6-2 6-5V25z' fill='%239d4edd'/></svg>">
+              <div class="music-play-btn"><i id="1" class="playMusic fa-solid fa-circle-play"></i></div>
+              <div class="img-title">Guitar Song</div>
+              <div class="img-description">The best guitar music to relax your mind</div>
+            </div>
+            <div class="music-card">
+              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23282828'/><path d='M40 30v40c-3 0-6 2-6 5s3 5 6 5 6-2 6-5V40l30-8v23c-3 0-6 2-6 5s3 5 6 5 6-2 6-5V25z' fill='%239d4edd'/></svg>">
+              <div class="music-play-btn"><i id="2" class="playMusic fa-solid fa-circle-play"></i></div>
+              <div class="img-title">Guitar Song</div>
+              <div class="img-description">The best guitar music to relax your mind</div>
+            </div>
+            <div class="music-card">
+              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23282828'/><path d='M40 30v40c-3 0-6 2-6 5s3 5 6 5 6-2 6-5V40l30-8v23c-3 0-6 2-6 5s3 5 6 5 6-2 6-5V25z' fill='%239d4edd'/></svg>">
+              <div class="music-play-btn"><i id="3" class="playMusic fa-solid fa-circle-play"></i></div>
+              <div class="img-title">Guitar Song</div>
+              <div class="img-description">The best guitar music to relax your mind</div>
+            </div>
+            <div class="music-card">
+              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23282828'/><path d='M40 30v40c-3 0-6 2-6 5s3 5 6 5 6-2 6-5V40l30-8v23c-3 0-6 2-6 5s3 5 6 5 6-2 6-5V25z' fill='%239d4edd'/></svg>">
+              <div class="music-play-btn"><i id="4" class="playMusic fa-solid fa-circle-play"></i></div>
+              <div class="img-title">Guitar Song</div>
+              <div class="img-description">The best guitar music to relax your mind</div>
+            </div>
+            <div class="music-card">
+              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23282828'/><path d='M40 30v40c-3 0-6 2-6 5s3 5 6 5 6-2 6-5V40l30-8v23c-3 0-6 2-6 5s3 5 6 5 6-2 6-5V25z' fill='%239d4edd'/></svg>">
+              <div class="music-play-btn"><i id="5" class="playMusic fa-solid fa-circle-play"></i></div>
+              <div class="img-title">Guitar Song</div>
+              <div class="img-description">The best guitar music to relax your mind</div>
+            </div>
+            <div class="music-card">
+              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23282828'/><path d='M40 30v40c-3 0-6 2-6 5s3 5 6 5 6-2 6-5V40l30-8v23c-3 0-6 2-6 5s3 5 6 5 6-2 6-5V25z' fill='%239d4edd'/></svg>">
+              <div class="music-play-btn"><i id="6" class="playMusic fa-solid fa-circle-play"></i></div>
+              <div class="img-title">Guitar Song</div>
+              <div class="img-description">The best guitar music to relax your mind</div>
+            </div>
           </div>
-          <div class="music-card">
-            <img src="Images/2.jpg">
-            <div class="music-play-btn"><i id="2" class="playMusic fa-solid fa-circle-play"></i></div>
-            <div class="img-title">Guitar Song</div>
-            <div class="img-description">The best guitar music to relax your mind</div>
+        </div>
+
+        <div class="music-section" id="recommended-section">
+          <h2 id="recommended-header">Recommended songs</h2>
+          <div class="songs">
+            <div class="music-card">
+              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23282828'/><path d='M40 30v40c-3 0-6 2-6 5s3 5 6 5 6-2 6-5V40l30-8v23c-3 0-6 2-6 5s3 5 6 5 6-2 6-5V25z' fill='%239d4edd'/></svg>">
+              <div class="music-play-btn"><i id="7" class="playMusic fa-solid fa-circle-play"></i></div>
+              <div class="img-title">Guitar Song</div>
+              <div class="img-description">The best guitar music to relax your mind</div>
+            </div>
+            <div class="music-card">
+              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23282828'/><path d='M40 30v40c-3 0-6 2-6 5s3 5 6 5 6-2 6-5V40l30-8v23c-3 0-6 2-6 5s3 5 6 5 6-2 6-5V25z' fill='%239d4edd'/></svg>">
+              <div class="music-play-btn"><i id="8" class="playMusic fa-solid fa-circle-play"></i></div>
+              <div class="img-title">Guitar Song</div>
+              <div class="img-description">The best guitar music to relax your mind</div>
+            </div>
+            <div class="music-card">
+              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23282828'/><path d='M40 30v40c-3 0-6 2-6 5s3 5 6 5 6-2 6-5V40l30-8v23c-3 0-6 2-6 5s3 5 6 5 6-2 6-5V25z' fill='%239d4edd'/></svg>">
+              <div class="music-play-btn"><i id="9" class="playMusic fa-solid fa-circle-play"></i></div>
+              <div class="img-title">Guitar Song</div>
+              <div class="img-description">The best guitar music to relax your mind</div>
+            </div>
+            <div class="music-card">
+              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23282828'/><path d='M40 30v40c-3 0-6 2-6 5s3 5 6 5 6-2 6-5V40l30-8v23c-3 0-6 2-6 5s3 5 6 5 6-2 6-5V25z' fill='%239d4edd'/></svg>">
+              <div class="music-play-btn"><i id="10" class="playMusic fa-solid fa-circle-play"></i></div>
+              <div class="img-title">Guitar Song</div>
+              <div class="img-description">The best guitar music to relax your mind</div>
+            </div>
+            <div class="music-card">
+              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23282828'/><path d='M40 30v40c-3 0-6 2-6 5s3 5 6 5 6-2 6-5V40l30-8v23c-3 0-6 2-6 5s3 5 6 5 6-2 6-5V25z' fill='%239d4edd'/></svg>">
+              <div class="music-play-btn"><i id="11" class="playMusic fa-solid fa-circle-play"></i></div>
+              <div class="img-title">Guitar Song</div>
+              <div class="img-description">The best guitar music to relax your mind</div>
+            </div>
+            <div class="music-card">
+              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23282828'/><path d='M40 30v40c-3 0-6 2-6 5s3 5 6 5 6-2 6-5V40l30-8v23c-3 0-6 2-6 5s3 5 6 5 6-2 6-5V25z' fill='%239d4edd'/></svg>">
+              <div class="music-play-btn"><i id="12" class="playMusic fa-solid fa-circle-play"></i></div>
+              <div class="img-title">Guitar Song</div>
+              <div class="img-description">The best guitar music to relax your mind</div>
+            </div>
           </div>
-          <div class="music-card">
-            <img src="Images/3.jpg">
-            <div class="music-play-btn"><i id="3" class="playMusic fa-solid fa-circle-play"></i></div>
-            <div class="img-title">Guitar Song</div>
-            <div class="img-description">The best guitar music to relax your mind</div>
-          </div>
-          <div class="music-card">
-            <img src="Images/4.jpg">
-            <div class="music-play-btn"><i id="4" class="playMusic fa-solid fa-circle-play"></i></div>
-            <div class="img-title">Guitar Song</div>
-            <div class="img-description">The best guitar music to relax your mind</div>
-          </div>
-          <div class="music-card">
-            <img src="Images/1.jpg">
-            <div class="music-play-btn"><i id="5" class="playMusic fa-solid fa-circle-play"></i></div>
-            <div class="img-title">Guitar Song</div>
-            <div class="img-description">The best guitar music to relax your mind</div>
-          </div>
-          <div class="music-card">
-            <img src="Images/2.jpg">
-            <div class="music-play-btn"><i id="6" class="playMusic fa-solid fa-circle-play"></i></div>
-            <div class="img-title">Guitar Song</div>
-            <div class="img-description">The best guitar music to relax your mind</div>
+        </div>
+
+        <div class="music-section" id="recent-section">
+          <h2>Recently played</h2>
+          <div class="songs">
+            <div class="music-card">
+              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23282828'/><path d='M40 30v40c-3 0-6 2-6 5s3 5 6 5 6-2 6-5V40l30-8v23c-3 0-6 2-6 5s3 5 6 5 6-2 6-5V25z' fill='%239d4edd'/></svg>">
+              <div class="music-play-btn"><i id="13" class="playMusic fa-solid fa-circle-play"></i></div>
+              <div class="img-title">Guitar Song</div>
+              <div class="img-description">The best guitar music to relax your mind</div>
+            </div>
+            <div class="music-card">
+              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23282828'/><path d='M40 30v40c-3 0-6 2-6 5s3 5 6 5 6-2 6-5V40l30-8v23c-3 0-6 2-6 5s3 5 6 5 6-2 6-5V25z' fill='%239d4edd'/></svg>">
+              <div class="music-play-btn"><i id="14" class="playMusic fa-solid fa-circle-play"></i></div>
+              <div class="img-title">Guitar Song</div>
+              <div class="img-description">The best guitar music to relax your mind</div>
+            </div>
+            <div class="music-card">
+              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23282828'/><path d='M40 30v40c-3 0-6 2-6 5s3 5 6 5 6-2 6-5V40l30-8v23c-3 0-6 2-6 5s3 5 6 5 6-2 6-5V25z' fill='%239d4edd'/></svg>">
+              <div class="music-play-btn"><i id="15" class="playMusic fa-solid fa-circle-play"></i></div>
+              <div class="img-title">Guitar Song</div>
+              <div class="img-description">The best guitar music to relax your mind</div>
+            </div>
+            <div class="music-card">
+              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23282828'/><path d='M40 30v40c-3 0-6 2-6 5s3 5 6 5 6-2 6-5V40l30-8v23c-3 0-6 2-6 5s3 5 6 5 6-2 6-5V25z' fill='%239d4edd'/></svg>">
+              <div class="music-play-btn"><i id="16" class="playMusic fa-solid fa-circle-play"></i></div>
+              <div class="img-title">Guitar Song</div>
+              <div class="img-description">The best guitar music to relax your mind</div>
+            </div>
+            <div class="music-card">
+              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23282828'/><path d='M40 30v40c-3 0-6 2-6 5s3 5 6 5 6-2 6-5V40l30-8v23c-3 0-6 2-6 5s3 5 6 5 6-2 6-5V25z' fill='%239d4edd'/></svg>">
+              <div class="music-play-btn"><i id="17" class="playMusic fa-solid fa-circle-play"></i></div>
+              <div class="img-title">Guitar Song</div>
+              <div class="img-description">The best guitar music to relax your mind</div>
+            </div>
+            <div class="music-card">
+              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23282828'/><path d='M40 30v40c-3 0-6 2-6 5s3 5 6 5 6-2 6-5V40l30-8v23c-3 0-6 2-6 5s3 5 6 5 6-2 6-5V25z' fill='%239d4edd'/></svg>">
+              <div class="music-play-btn"><i id="18" class="playMusic fa-solid fa-circle-play"></i></div>
+              <div class="img-title">Guitar Song</div>
+              <div class="img-description">The best guitar music to relax your mind</div>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="music-section" id="recommended-section">
-        <h2 id="recommended-header">Recommended songs</h2>
-        <div class="songs">
-          <div class="music-card">
-            <img src="Images/4.jpg">
-            <div class="music-play-btn"><i id="7" class="playMusic fa-solid fa-circle-play"></i></div>
-            <div class="img-title">Guitar Song</div>
-            <div class="img-description">The best guitar music to relax your mind</div>
+      <!-- Playlist Detailed View -->
+      <div id="playlist-view-container" style="display: none;">
+        <div class="playlist-header">
+          <div class="playlist-cover-wrapper">
+            <img id="playlist-view-cover" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23282828'/><path d='M40 30v40c-3 0-6 2-6 5s3 5 6 5 6-2 6-5V40l30-8v23c-3 0-6 2-6 5s3 5 6 5 6-2 6-5V25z' fill='%239d4edd'/></svg>" alt="Playlist Cover">
           </div>
-          <div class="music-card">
-            <img src="Images/3.jpg">
-            <div class="music-play-btn"><i id="8" class="playMusic fa-solid fa-circle-play"></i></div>
-            <div class="img-title">Guitar Song</div>
-            <div class="img-description">The best guitar music to relax your mind</div>
+          <div class="playlist-header-details">
+            <span class="playlist-badge">PLAYLIST</span>
+            <h1 id="playlist-view-title">Playlist Title</h1>
+            <p id="playlist-view-description">Description text here...</p>
+            <div class="playlist-meta">
+              <span id="playlist-view-owner" class="playlist-owner">Owner Name</span>
+              <span class="bullet">•</span>
+              <span id="playlist-view-count">0 songs</span>
+              <span class="bullet">•</span>
+              <span id="playlist-view-duration">0 min 0 sec</span>
+              <span class="bullet">•</span>
+              <span id="playlist-view-date">Created Date</span>
+            </div>
           </div>
-          <div class="music-card">
-            <img src="Images/2.jpg">
-            <div class="music-play-btn"><i id="9" class="playMusic fa-solid fa-circle-play"></i></div>
-            <div class="img-title">Guitar Song</div>
-            <div class="img-description">The best guitar music to relax your mind</div>
-          </div>
-          <div class="music-card">
-            <img src="Images/1.jpg">
-            <div class="music-play-btn"><i id="10" class="playMusic fa-solid fa-circle-play"></i></div>
-            <div class="img-title">Guitar Song</div>
-            <div class="img-description">The best guitar music to relax your mind</div>
-          </div>
-          <div class="music-card">
-            <img src="Images/4.jpg">
-            <div class="music-play-btn"><i id="11" class="playMusic fa-solid fa-circle-play"></i></div>
-            <div class="img-title">Guitar Song</div>
-            <div class="img-description">The best guitar music to relax your mind</div>
-          </div>
-          <div class="music-card">
-            <img src="Images/3.jpg">
-            <div class="music-play-btn"><i id="12" class="playMusic fa-solid fa-circle-play"></i></div>
-            <div class="img-title">Guitar Song</div>
-            <div class="img-description">The best guitar music to relax your mind</div>
+        </div>
+
+        <div class="playlist-actions-bar">
+          <button id="playlist-play-btn" class="playlist-action-btn-green" title="Play"><i class="fa-solid fa-play"></i> Play</button>
+          <button id="playlist-shuffle-btn" class="playlist-action-btn-outline" title="Shuffle"><i class="fa-solid fa-shuffle"></i></button>
+          <button id="playlist-edit-btn" class="playlist-action-btn-outline" title="Edit Details"><i class="fa-solid fa-pen"></i> Edit Details</button>
+          <button id="playlist-delete-btn" class="playlist-action-btn-outline warning" title="Delete Playlist"><i class="fa-solid fa-trash"></i> Delete</button>
+          <button id="playlist-add-songs-btn" class="playlist-action-btn-green secondary" title="Add Songs"><i class="fa-solid fa-plus"></i> Add Songs</button>
+        </div>
+
+        <div class="playlist-songs-table-container">
+          <table class="playlist-songs-table" id="playlist-songs-table">
+            <thead>
+              <tr>
+                <th class="col-index">#</th>
+                <th class="col-title">Title</th>
+                <th class="col-album">Album</th>
+                <th class="col-duration"><i class="fa-regular fa-clock"></i></th>
+                <th class="col-actions"></th>
+              </tr>
+            </thead>
+            <tbody id="playlist-songs-rows">
+              <!-- Dynamically populated song rows -->
+            </tbody>
+          </table>
+          <div id="playlist-empty-state" class="playlist-empty-state" style="display: none;">
+            <i class="fa-solid fa-music"></i>
+            <p>This playlist is empty.</p>
+            <button class="add-songs-action-btn" id="playlist-empty-add-songs-btn">Find songs to add</button>
           </div>
         </div>
       </div>
 
-      <div class="music-section" id="recent-section">
-        <h2>Recently played</h2>
-        <div class="songs">
-          <div class="music-card">
-            <img src="Images/1.jpg">
-            <div class="music-play-btn"><i id="13" class="playMusic fa-solid fa-circle-play"></i></div>
-            <div class="img-title">Guitar Song</div>
-            <div class="img-description">The best guitar music to relax your mind</div>
-          </div>
-          <div class="music-card">
-            <img src="Images/2.jpg">
-            <div class="music-play-btn"><i id="14" class="playMusic fa-solid fa-circle-play"></i></div>
-            <div class="img-title">Guitar Song</div>
-            <div class="img-description">The best guitar music to relax your mind</div>
-          </div>
-          <div class="music-card">
-            <img src="Images/3.jpg">
-            <div class="music-play-btn"><i id="15" class="playMusic fa-solid fa-circle-play"></i></div>
-            <div class="img-title">Guitar Song</div>
-            <div class="img-description">The best guitar music to relax your mind</div>
-          </div>
-          <div class="music-card">
-            <img src="Images/4.jpg">
-            <div class="music-play-btn"><i id="16" class="playMusic fa-solid fa-circle-play"></i></div>
-            <div class="img-title">Guitar Song</div>
-            <div class="img-description">The best guitar music to relax your mind</div>
-          </div>
-          <div class="music-card">
-            <img src="Images/1.jpg">
-            <div class="music-play-btn"><i id="17" class="playMusic fa-solid fa-circle-play"></i></div>
-            <div class="img-title">Guitar Song</div>
-            <div class="img-description">The best guitar music to relax your mind</div>
-          </div>
-          <div class="music-card">
-            <img src="Images/2.jpg">
-            <div class="music-play-btn"><i id="18" class="playMusic fa-solid fa-circle-play"></i></div>
-            <div class="img-title">Guitar Song</div>
-            <div class="img-description">The best guitar music to relax your mind</div>
-          </div>
+      <!-- Dedicated Auth View Page -->
+      <div id="auth-view-container" style="display: none;">
+        <div class="auth-page-card">
+          <h2 id="auth-page-title">Log in to Playvox</h2>
+          <form id="auth-page-form" class="modal-form">
+            <div class="form-group">
+              <label for="auth-page-username">Username</label>
+              <input type="text" id="auth-page-username" required placeholder="Enter username">
+            </div>
+            <div class="form-group">
+              <label for="auth-page-password">Password</label>
+              <input type="password" id="auth-page-password" required placeholder="Enter password">
+            </div>
+            <button type="submit" id="auth-page-submit-btn" class="form-submit-btn">Log in</button>
+            <p class="auth-page-toggle-text">Don't have an account? <a href="#" id="auth-page-toggle-link">Sign up</a></p>
+          </form>
         </div>
       </div>
     </div>
@@ -202,7 +295,7 @@
   <!-- player -->
   <div class="player-bar">
     <div class="now-bar">
-      <img src="Images/1.jpg" alt="">
+      <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23282828'/><path d='M40 30v40c-3 0-6 2-6 5s3 5 6 5 6-2 6-5V40l30-8v23c-3 0-6 2-6 5s3 5 6 5 6-2 6-5V25z' fill='%239d4edd'/></svg>" alt="">
       <div>
         <div class="img-title-info">Title 1</div>
         <div class="img-des-info">this is description for title 1 song</div>
@@ -217,13 +310,118 @@
         <div><i id="repeat" class="player-btns fa-solid fa-repeat"></i></div>
       </div>
 
-      <div>
+      <div class="progress-bar-wrapper">
+        <span id="currentTime" class="time-label">0:00</span>
         <input type="range" id="progressBar" value="0">
+        <span id="totalDuration" class="time-label">0:00</span>
       </div>
     </div>
-    <div></div>
+    <div class="volume-control-wrapper">
+      <i id="volume-icon" class="fa-solid fa-volume-high" style="cursor: pointer;"></i>
+      <input type="range" id="volumeBar" min="0" max="100" value="80">
+    </div>
   </div>
-  <script src="script.js"></script>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast-notification">
+    <i class="fa-solid fa-circle-info"></i>
+    <span id="toast-message"></span>
+  </div>
+
+  <!-- Auth Modal (Signup / Login) -->
+  <div id="auth-modal" class="modal-overlay">
+    <div class="modal-content auth-modal-content">
+      <button class="modal-close-btn" id="auth-modal-close"><i class="fa-solid fa-xmark"></i></button>
+      <h2 id="auth-modal-title">Log in to Playvox</h2>
+      <form id="auth-form" class="modal-form">
+        <div class="form-group">
+          <label for="auth-username">Username</label>
+          <input type="text" id="auth-username" required placeholder="Enter username">
+        </div>
+        <div class="form-group">
+          <label for="auth-password">Password</label>
+          <input type="password" id="auth-password" required placeholder="Enter password">
+        </div>
+        <button type="submit" id="auth-submit-btn" class="form-submit-btn">Log in</button>
+        <p class="auth-toggle-text">Don't have an account? <a href="#" id="auth-toggle-link">Sign up</a></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- Playlist Form Modal -->
+  <div id="playlist-modal" class="modal-overlay">
+    <div class="modal-content playlist-modal-content">
+      <button class="modal-close-btn" id="playlist-modal-close"><i class="fa-solid fa-xmark"></i></button>
+      <h2 id="playlist-modal-title">Create Playlist</h2>
+      <form id="playlist-form" class="modal-form">
+        <div class="form-row">
+          <div class="form-group flex-1">
+            <label for="playlist-name">Playlist Name *</label>
+            <input type="text" id="playlist-name" required placeholder="My Playlist #1">
+            
+            <label for="playlist-description">Description</label>
+            <textarea id="playlist-description" placeholder="Add an optional description" rows="3"></textarea>
+          </div>
+          <div class="form-group playlist-image-upload">
+            <label for="playlist-cover-url">Cover Image URL</label>
+            <input type="text" id="playlist-cover-url" placeholder="https://example.com/cover.jpg">
+            <div class="image-preview-box">
+              <img id="playlist-cover-preview" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23282828'/><path d='M40 30v40c-3 0-6 2-6 5s3 5 6 5 6-2 6-5V40l30-8v23c-3 0-6 2-6 5s3 5 6 5 6-2 6-5V25z' fill='%239d4edd'/></svg>" alt="Cover Preview">
+            </div>
+          </div>
+        </div>
+        
+        <div class="form-group flex-row align-center gap-1">
+          <input type="checkbox" id="playlist-is-public" checked style="width: auto; margin-right: 0.5rem;">
+          <label for="playlist-is-public" class="checkbox-label" style="display: inline-block;">Make this playlist public</label>
+        </div>
+
+        <!-- Song Picker Section -->
+        <div class="song-picker-section" id="song-picker-section">
+          <label>Select Songs to Add</label>
+          <div class="song-picker-search-container">
+            <i class="fa-solid fa-magnifying-glass search-picker-icon"></i>
+            <input type="text" id="song-picker-search" placeholder="Search songs by title or artist...">
+          </div>
+          <div class="song-picker-list-container">
+            <table class="song-picker-table">
+              <thead>
+                <tr>
+                  <th class="col-check"></th>
+                  <th class="col-picker-title">Song</th>
+                  <th class="col-picker-album">Album</th>
+                  <th class="col-picker-duration">Duration</th>
+                </tr>
+              </thead>
+              <tbody id="song-picker-rows">
+                <!-- Loaded dynamically -->
+              </tbody>
+            </table>
+            <div id="song-picker-empty" class="song-picker-empty" style="display: none;">
+              No matching songs found in database.
+            </div>
+          </div>
+          <div class="song-picker-footer">
+            <span>Selected Songs: <strong id="song-picker-counter">0</strong></span>
+          </div>
+        </div>
+
+        <div class="modal-form-actions">
+          <button type="button" id="playlist-cancel-btn" class="modal-btn-secondary">Cancel</button>
+          <button type="submit" id="playlist-submit-btn" class="modal-btn-primary">Create Playlist</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Song Option Action Context Menu -->
+  <div id="context-menu" class="context-menu" style="display: none;">
+    <div class="context-menu-item" id="menu-play"><i class="fa-solid fa-play"></i> Play Song</div>
+    <div class="context-menu-item" id="menu-remove" style="display: none;"><i class="fa-solid fa-trash"></i> Remove from Playlist</div>
+    <div class="context-menu-item" id="menu-share"><i class="fa-solid fa-share-nodes"></i> Share Link</div>
+  </div>
+
+  <script src="/script.js"></script>
 
 </body>
 

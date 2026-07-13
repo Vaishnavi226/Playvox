@@ -1,0 +1,618 @@
+{
+  "users": [
+    {
+      "_id": "mrjf0rubisyz5",
+      "username": "admin",
+      "password": "$2a$10$QwkwIJ5AUN1BWGUp0hpg6uuWfDihyaxV7vNhkGQSSKHv6XI9OJuhe",
+      "createdAt": "2026-07-13T16:07:00.851Z",
+      "updatedAt": "2026-07-13T16:07:00.851Z"
+    },
+    {
+      "_id": "mrjkvyw44p8np",
+      "username": "testuser",
+      "password": "$2a$10$LWRxBOysPnYG.Mxlj35xRuDTqb3IJbFeCJSSeOuCQTLXLCO9ezLyW",
+      "createdAt": "2026-07-13T18:51:14.404Z",
+      "updatedAt": "2026-07-13T18:51:14.404Z"
+    }
+  ],
+  "playlists": [
+    {
+      "_id": "mrjfeudihxmnt",
+      "name": "Favvvv",
+      "description": "",
+      "coverImage": "",
+      "isPublic": true,
+      "songs": [
+        "mrjevqluwzoyu",
+        "mrjevqlvk7ml0",
+        "mrjevqlvlz3sc"
+      ],
+      "owner": "mrjf0rubisyz5",
+      "ownerName": "admin",
+      "createdAt": "2026-07-13T16:17:57.318Z",
+      "updatedAt": "2026-07-13T16:17:57.318Z"
+    },
+    {
+      "_id": "mrjflwuim02rw",
+      "name": "Arijit Singh",
+      "description": "",
+      "coverImage": "",
+      "isPublic": true,
+      "songs": [
+        "mrjevqlvbbx6z"
+      ],
+      "owner": "mrjf0rubisyz5",
+      "ownerName": "admin",
+      "createdAt": "2026-07-13T16:23:27.114Z",
+      "updatedAt": "2026-07-13T16:23:27.115Z"
+    },
+    {
+      "_id": "mrjl3f8s3otjh",
+      "name": "PARTY",
+      "description": "",
+      "coverImage": "",
+      "isPublic": true,
+      "songs": [
+        "mrjevqlvvzaw0",
+        "mrjevqlvlhss2",
+        "mrjevqluwzoyu"
+      ],
+      "owner": "mrjf0rubisyz5",
+      "ownerName": "admin",
+      "createdAt": "2026-07-13T18:57:02.189Z",
+      "updatedAt": "2026-07-13T18:57:02.189Z"
+    }
+  ],
+  "songs": [
+    {
+      "_id": "mrjevqluwzoyu",
+      "songName": "Music Soothe - Meditation Music",
+      "songDes": "By StimiBeats",
+      "songImage": "https://usercontent.jamendo.com?type=album&id=522038&width=300&trackid=2034080",
+      "songPath": "https://prod-1.storage.jamendo.com/?trackid=2034080&format=mp31&from=8E5%2F88E25TVvzEKHk%2BY8Tw%3D%3D%7Clkpq8DIkBMkyMtpUo0tCeQ%3D%3D",
+      "albumName": "Impression - Meditation Music",
+      "duration": 216,
+      "createdAt": "2026-07-13T16:03:05.970Z",
+      "updatedAt": "2026-07-13T16:03:05.971Z"
+    },
+    {
+      "_id": "mrjevqlvl15pm",
+      "songName": "Lofi Chillout Hip Hop Beat",
+      "songDes": "By Joystock",
+      "songImage": "https://usercontent.jamendo.com?type=album&id=365590&width=300&trackid=1593988",
+      "songPath": "https://prod-1.storage.jamendo.com/?trackid=1593988&format=mp31&from=LgfeCaiScLaBup9wFD3kVQ%3D%3D%7C%2F1p6SC9Za09yJVX%2FQtSziQ%3D%3D",
+      "albumName": "Lofi Chillout Hip Hop Beat",
+      "duration": 149,
+      "createdAt": "2026-07-13T16:03:05.971Z",
+      "updatedAt": "2026-07-13T16:03:05.971Z"
+    },
+    {
+      "_id": "mrjevqlvvzaw0",
+      "songName": "RED LIGHT",
+      "songDes": "By Egor Budennyy",
+      "songImage": "https://usercontent.jamendo.com?type=album&id=477294&width=300&trackid=1932670",
+      "songPath": "https://prod-1.storage.jamendo.com/?trackid=1932670&format=mp31&from=fezlzls9OSoD6uPcRwEC2w%3D%3D%7CJThVUhftAPSKyYk6NCP39w%3D%3D",
+      "albumName": "RED LIGHT",
+      "duration": 190,
+      "createdAt": "2026-07-13T16:03:05.971Z",
+      "updatedAt": "2026-07-13T16:03:05.971Z"
+    },
+    {
+      "_id": "mrjevqlvlhss2",
+      "songName": "On the Dance Floor",
+      "songDes": "By Monkeyman",
+      "songImage": "https://usercontent.jamendo.com?type=album&id=128775&width=300&trackid=1080806",
+      "songPath": "https://prod-1.storage.jamendo.com/?trackid=1080806&format=mp31&from=mAM%2FwQLE%2FoYT%2FD5AK7NL7A%3D%3D%7CqTwcS2tCmoSVqiFw73CGhw%3D%3D",
+      "albumName": "On the Dance Floor",
+      "duration": 270,
+      "createdAt": "2026-07-13T16:03:05.971Z",
+      "updatedAt": "2026-07-13T16:03:05.971Z"
+    },
+    {
+      "_id": "mrjevqlvaftf6",
+      "songName": "Abstract Ideas",
+      "songDes": "By DHDMusic",
+      "songImage": "https://usercontent.jamendo.com?type=album&id=500798&width=300&trackid=1982365",
+      "songPath": "https://prod-1.storage.jamendo.com/?trackid=1982365&format=mp31&from=Hb4%2FmP5tI7ypsRKcS%2FZjPw%3D%3D%7CusWPwxYSE8By%2FYxB4M637g%3D%3D",
+      "albumName": "Abstract Ideas",
+      "duration": 114,
+      "createdAt": "2026-07-13T16:03:05.971Z",
+      "updatedAt": "2026-07-13T16:03:05.971Z"
+    },
+    {
+      "_id": "mrjevqlvtwx46",
+      "songName": "Like I Do",
+      "songDes": "By I. D. F. X.",
+      "songImage": "https://usercontent.jamendo.com?type=album&id=525683&width=300&trackid=2040935",
+      "songPath": "https://prod-1.storage.jamendo.com/?trackid=2040935&format=mp31&from=TFMB7i89qIVcj%2FMxfxBq6w%3D%3D%7CuvlgPIDC57lEvZQopV0FPg%3D%3D",
+      "albumName": "Like I Do",
+      "duration": 191,
+      "createdAt": "2026-07-13T16:03:05.971Z",
+      "updatedAt": "2026-07-13T16:03:05.971Z"
+    },
+    {
+      "_id": "mrjevqlvk7ml0",
+      "songName": "Alone",
+      "songDes": "By Color Out",
+      "songImage": "https://usercontent.jamendo.com?type=album&id=455221&width=300&trackid=1886257",
+      "songPath": "https://prod-1.storage.jamendo.com/?trackid=1886257&format=mp31&from=KzPCIHvjPWYv5nzfvpU75A%3D%3D%7Ci0u0TAUg9KIGD9b%2Bj6caWA%3D%3D",
+      "albumName": "Alone",
+      "duration": 245,
+      "createdAt": "2026-07-13T16:03:05.971Z",
+      "updatedAt": "2026-07-13T16:03:05.971Z"
+    },
+    {
+      "_id": "mrjevqlvlz3sc",
+      "songName": "African Vibe",
+      "songDes": "By DHDMusic",
+      "songImage": "https://usercontent.jamendo.com?type=album&id=545352&width=300&trackid=2124813",
+      "songPath": "https://prod-1.storage.jamendo.com/?trackid=2124813&format=mp31&from=NRWn6dosLFkbNLgFdsYFvg%3D%3D%7Czf%2BOVSJySspX3w6cCAEjgg%3D%3D",
+      "albumName": "African Vibe",
+      "duration": 121,
+      "createdAt": "2026-07-13T16:03:05.971Z",
+      "updatedAt": "2026-07-13T16:03:05.971Z"
+    },
+    {
+      "_id": "mrjevqlvbdque",
+      "songName": "Bad Intentions",
+      "songDes": "By Bessonn&amp;sa",
+      "songImage": "https://usercontent.jamendo.com?type=album&id=551560&width=300&trackid=2137882",
+      "songPath": "https://prod-1.storage.jamendo.com/?trackid=2137882&format=mp31&from=zlQYp1dEWUs0Zb%2F1ItOszA%3D%3D%7COxhFsanJ6kMpD5%2FxgZy1cQ%3D%3D",
+      "albumName": "Bad Intentions",
+      "duration": 181,
+      "createdAt": "2026-07-13T16:03:05.971Z",
+      "updatedAt": "2026-07-13T16:03:05.971Z"
+    },
+    {
+      "_id": "mrjevqlvlun1i",
+      "songName": "Ambient Future",
+      "songDes": "By DHDMusic",
+      "songImage": "https://usercontent.jamendo.com?type=album&id=566123&width=300&trackid=2169630",
+      "songPath": "https://prod-1.storage.jamendo.com/?trackid=2169630&format=mp31&from=GWci4szbR5mMarJzPTtuEQ%3D%3D%7CzrTM0CMIqo2PB8emwDCytg%3D%3D",
+      "albumName": "Ambient Future",
+      "duration": 140,
+      "createdAt": "2026-07-13T16:03:05.971Z",
+      "updatedAt": "2026-07-13T16:03:05.971Z"
+    },
+    {
+      "_id": "mrjevqlvbbx6z",
+      "songName": "Not the One to Say (I Told You So) (24-bit Master)",
+      "songDes": "By Cole Powell",
+      "songImage": "https://usercontent.jamendo.com?type=album&id=229701&width=300&trackid=1826189",
+      "songPath": "https://prod-1.storage.jamendo.com/?trackid=1826189&format=mp31&from=Kc7AfiSFz7khHB%2BFgXkAMw%3D%3D%7ChGFnZdQ%2FzNlHycKmAu0DrQ%3D%3D",
+      "albumName": "Not the One to Say (I Told You So) (24-bit Master)",
+      "duration": 235,
+      "createdAt": "2026-07-13T16:03:05.971Z",
+      "updatedAt": "2026-07-13T16:03:05.971Z"
+    },
+    {
+      "_id": "mrjevqlvxirad",
+      "songName": "The Dark Protector",
+      "songDes": "By Grégoire Lourme",
+      "songImage": "https://usercontent.jamendo.com?type=album&id=630978&width=300&trackid=2313014",
+      "songPath": "https://prod-1.storage.jamendo.com/?trackid=2313014&format=mp31&from=4omO%2B4noh7s1WMmuy4gjdQ%3D%3D%7C%2FtH2xgQJK%2B%2BQr0zrjuIM6w%3D%3D",
+      "albumName": "The Dark Protector",
+      "duration": 246,
+      "createdAt": "2026-07-13T16:03:05.971Z",
+      "updatedAt": "2026-07-13T16:03:05.971Z"
+    },
+    {
+      "_id": "mrjevqlvda2wl",
+      "songName": "Background Flow",
+      "songDes": "By LEXMusic",
+      "songImage": "https://usercontent.jamendo.com?type=album&id=544170&width=300&trackid=2112448",
+      "songPath": "https://prod-1.storage.jamendo.com/?trackid=2112448&format=mp31&from=oXVp1wimq1HOpcZ%2F5FwT8g%3D%3D%7CfNOjMPVQws174vjzoTL5oQ%3D%3D",
+      "albumName": "Background Flow",
+      "duration": 187,
+      "createdAt": "2026-07-13T16:03:05.971Z",
+      "updatedAt": "2026-07-13T16:03:05.971Z"
+    },
+    {
+      "_id": "mrjevqlvqy7jl",
+      "songName": "Autumn Break",
+      "songDes": "By DHDMusic",
+      "songImage": "https://usercontent.jamendo.com?type=album&id=518305&width=300&trackid=2025864",
+      "songPath": "https://prod-1.storage.jamendo.com/?trackid=2025864&format=mp31&from=4OYTQvPgE0G9AMfLuqZegQ%3D%3D%7CyhcqbPBP9Za4KQOly8DEkA%3D%3D",
+      "albumName": "Autumn Break",
+      "duration": 139,
+      "createdAt": "2026-07-13T16:03:05.971Z",
+      "updatedAt": "2026-07-13T16:03:05.971Z"
+    },
+    {
+      "_id": "mrjevqlvopg6e",
+      "songName": "Into The Sky",
+      "songDes": "By Lesya NZ",
+      "songImage": "https://usercontent.jamendo.com?type=album&id=526492&width=300&trackid=2043011",
+      "songPath": "https://prod-1.storage.jamendo.com/?trackid=2043011&format=mp31&from=l%2FUyqW5YtsSgMT9biXVlnw%3D%3D%7CGQ9pVP5x8XVuh2gSRA21rA%3D%3D",
+      "albumName": "Into The Sky",
+      "duration": 186,
+      "createdAt": "2026-07-13T16:03:05.971Z",
+      "updatedAt": "2026-07-13T16:03:05.971Z"
+    },
+    {
+      "_id": "mrjevqlvesfjk",
+      "songName": "Más Allá",
+      "songDes": "By Vince Miranda",
+      "songImage": "https://usercontent.jamendo.com?type=album&id=230089&width=300&trackid=1850249",
+      "songPath": "https://prod-1.storage.jamendo.com/?trackid=1850249&format=mp31&from=kJs6OUX4TjINfZUJoU60IA%3D%3D%7CdXxBy%2Fzu%2F3OsOA%2FW19OX8g%3D%3D",
+      "albumName": "Más Allá",
+      "duration": 243,
+      "createdAt": "2026-07-13T16:03:05.971Z",
+      "updatedAt": "2026-07-13T16:03:05.971Z"
+    },
+    {
+      "_id": "mrjevqlvr5il9",
+      "songName": "You and Me",
+      "songDes": "By JekK",
+      "songImage": "https://usercontent.jamendo.com?type=album&id=138887&width=300&trackid=1157358",
+      "songPath": "https://prod-1.storage.jamendo.com/?trackid=1157358&format=mp31&from=AtIn97xVA8NNM24Kl8eQgg%3D%3D%7CT9lAiWNfSuXhp2TmarbxjQ%3D%3D",
+      "albumName": "Dear Dreams",
+      "duration": 194,
+      "createdAt": "2026-07-13T16:03:05.971Z",
+      "updatedAt": "2026-07-13T16:03:05.971Z"
+    },
+    {
+      "_id": "mrjevqlv9hkf9",
+      "songName": "YO QUIERO BEBER - Pueto pa lo mio records Presenta - Marshall Aquicci ft AllGenius - (Musica urbana, latin, latin urban, bass)",
+      "songDes": "By PUETO PA LO MIO RECORDS",
+      "songImage": "https://usercontent.jamendo.com?type=album&id=451723&width=300&trackid=1876747",
+      "songPath": "https://prod-1.storage.jamendo.com/?trackid=1876747&format=mp31&from=tzychEfn00JSVIsG2pH1wg%3D%3D%7CK9PCv1NUM4qUvgLHVPNJ3A%3D%3D",
+      "albumName": "YO QUIERO BEBER - Pueto pa lo mio records Presenta - Marshall Aq",
+      "duration": 192,
+      "createdAt": "2026-07-13T16:03:05.971Z",
+      "updatedAt": "2026-07-13T16:03:05.971Z"
+    },
+    {
+      "_id": "mrjevqlvd9us9",
+      "songName": "Blue Moon",
+      "songDes": "By DHDMusic",
+      "songImage": "https://usercontent.jamendo.com?type=album&id=508674&width=300&trackid=1999390",
+      "songPath": "https://prod-1.storage.jamendo.com/?trackid=1999390&format=mp31&from=5ueZEVLG%2FuXoGbMsmdB6kw%3D%3D%7C4fMtvGKYkG79FIziTArWvA%3D%3D",
+      "albumName": "Blue Moon",
+      "duration": 113,
+      "createdAt": "2026-07-13T16:03:05.971Z",
+      "updatedAt": "2026-07-13T16:03:05.971Z"
+    },
+    {
+      "_id": "mrjevqlvqepmm",
+      "songName": "Tentadora",
+      "songDes": "By DANOIS",
+      "songImage": "https://usercontent.jamendo.com?type=album&id=595553&width=300&trackid=2235600",
+      "songPath": "https://prod-1.storage.jamendo.com/?trackid=2235600&format=mp31&from=rWYB6wy9KFWEWEv%2FwYooZw%3D%3D%7CCSjHpt6toZXQ5Flc5Caipw%3D%3D",
+      "albumName": "Tentadora",
+      "duration": 198,
+      "createdAt": "2026-07-13T16:03:05.971Z",
+      "updatedAt": "2026-07-13T16:03:05.971Z"
+    },
+    {
+      "_id": "mrjevqlv449ni",
+      "songName": "Words of Love",
+      "songDes": "By DHDMusic",
+      "songImage": "https://usercontent.jamendo.com?type=album&id=522894&width=300&trackid=2035876",
+      "songPath": "https://prod-1.storage.jamendo.com/?trackid=2035876&format=mp31&from=KUq80xzRqy28HdoveUVZsw%3D%3D%7CFP6oQ8tRgkflBqRB610sEg%3D%3D",
+      "albumName": "Words of Love",
+      "duration": 160,
+      "createdAt": "2026-07-13T16:03:05.971Z",
+      "updatedAt": "2026-07-13T16:03:05.971Z"
+    },
+    {
+      "_id": "mrjevqlvitkgg",
+      "songName": "New Wave",
+      "songDes": "By ALIVESTONE",
+      "songImage": "https://usercontent.jamendo.com?type=album&id=500126&width=300&trackid=1980794",
+      "songPath": "https://prod-1.storage.jamendo.com/?trackid=1980794&format=mp31&from=dfMhHNJSSAWcbJ0zvDFOFw%3D%3D%7CEJVAOuckq00WJf0H2Hrq0A%3D%3D",
+      "albumName": "New Way",
+      "duration": 201,
+      "createdAt": "2026-07-13T16:03:05.971Z",
+      "updatedAt": "2026-07-13T16:03:05.971Z"
+    },
+    {
+      "_id": "mrjevqlv8ka85",
+      "songName": "Lose My Rose",
+      "songDes": "By Ed Napoli",
+      "songImage": "https://usercontent.jamendo.com?type=album&id=589030&width=300&trackid=2221139",
+      "songPath": "https://prod-1.storage.jamendo.com/?trackid=2221139&format=mp31&from=JQz7PNqPE1ghNDJCYSU56g%3D%3D%7CftHT3oDlHNw1nTOfeXGjKw%3D%3D",
+      "albumName": "Lose My Rose",
+      "duration": 199,
+      "createdAt": "2026-07-13T16:03:05.971Z",
+      "updatedAt": "2026-07-13T16:03:05.971Z"
+    },
+    {
+      "_id": "mrjevqlvlkuzl",
+      "songName": "Alive",
+      "songDes": "By Songwriterz",
+      "songImage": "https://usercontent.jamendo.com?type=album&id=581062&width=300&trackid=2203626",
+      "songPath": "https://prod-1.storage.jamendo.com/?trackid=2203626&format=mp31&from=JSqHwq%2BYsFp7aON03Bv9WA%3D%3D%7C7zMiYtjkdjRrwf6hCtrIfw%3D%3D",
+      "albumName": "Alive",
+      "duration": 234,
+      "createdAt": "2026-07-13T16:03:05.971Z",
+      "updatedAt": "2026-07-13T16:03:05.971Z"
+    },
+    {
+      "_id": "mrjevqlvmk1y7",
+      "songName": "Be Without U",
+      "songDes": "By Neon NiteClub",
+      "songImage": "https://usercontent.jamendo.com?type=album&id=570554&width=300&trackid=2181597",
+      "songPath": "https://prod-1.storage.jamendo.com/?trackid=2181597&format=mp31&from=aJvUf6SOmn7IayVs9qRbSw%3D%3D%7Cxl2tir1d0%2BOCPhPNHuqQ%2BQ%3D%3D",
+      "albumName": "Be Without U",
+      "duration": 244,
+      "createdAt": "2026-07-13T16:03:05.971Z",
+      "updatedAt": "2026-07-13T16:03:05.971Z"
+    },
+    {
+      "_id": "mrjevqlv0rnbn",
+      "songName": "Wish You Were Here",
+      "songDes": "By The.madpix.project",
+      "songImage": "https://usercontent.jamendo.com?type=album&id=145774&width=300&trackid=1214935",
+      "songPath": "https://prod-1.storage.jamendo.com/?trackid=1214935&format=mp31&from=0fm3Fr%2F0KVv9zz836HcBOw%3D%3D%7C8yyQFL58JZZFpiN4CidqlA%3D%3D",
+      "albumName": "Wish You Were Here",
+      "duration": 270,
+      "createdAt": "2026-07-13T16:03:05.971Z",
+      "updatedAt": "2026-07-13T16:03:05.971Z"
+    },
+    {
+      "_id": "mrjevqlvpjark",
+      "songName": "RED LIGHT",
+      "songDes": "By Egor Budennyy",
+      "songImage": "https://usercontent.jamendo.com?type=album&id=477294&width=300&trackid=1932670",
+      "songPath": "https://prod-1.storage.jamendo.com/?trackid=1932670&format=mp31&from=mReVCQO4Bxw%2BA2jB0HdQ7A%3D%3D%7C%2BS5jP%2FrZvfZSCzjSgnB79w%3D%3D",
+      "albumName": "RED LIGHT",
+      "duration": 190,
+      "createdAt": "2026-07-13T16:03:05.971Z",
+      "updatedAt": "2026-07-13T16:03:05.971Z"
+    },
+    {
+      "_id": "mrjevqlvgbi54",
+      "songName": "What Is Love",
+      "songDes": "By Melanie Ungar",
+      "songImage": "https://usercontent.jamendo.com?type=album&id=144705&width=300&trackid=1204669",
+      "songPath": "https://prod-1.storage.jamendo.com/?trackid=1204669&format=mp31&from=3%2BL%2F%2Fz4ObjpAeKHJEFW74A%3D%3D%7C7HxVAYJ8Bgzh3FAGPfFBCQ%3D%3D",
+      "albumName": "What Is Love",
+      "duration": 212,
+      "createdAt": "2026-07-13T16:03:05.971Z",
+      "updatedAt": "2026-07-13T16:03:05.971Z"
+    },
+    {
+      "_id": "mrjevqlvooiuv",
+      "songName": "Love Will Come Back Again",
+      "songDes": "By Chaz Robinson",
+      "songImage": "https://usercontent.jamendo.com?type=album&id=136930&width=300&trackid=1141572",
+      "songPath": "https://prod-1.storage.jamendo.com/?trackid=1141572&format=mp31&from=0iiujBRjGLgaJVJs8zGRog%3D%3D%7Cvj5W6eRY6ncPd1bkz9MrNQ%3D%3D",
+      "albumName": "Chaz Robinson",
+      "duration": 236,
+      "createdAt": "2026-07-13T16:03:05.971Z",
+      "updatedAt": "2026-07-13T16:03:05.971Z"
+    },
+    {
+      "_id": "mrjevqlv7w59i",
+      "songName": "First",
+      "songDes": "By JekK",
+      "songImage": "https://usercontent.jamendo.com?type=album&id=138887&width=300&trackid=1157362",
+      "songPath": "https://prod-1.storage.jamendo.com/?trackid=1157362&format=mp31&from=TSsyItq%2FiWXhvJU0ol3iCA%3D%3D%7ChFFnLlbPsKg4%2Fpy6ekmshQ%3D%3D",
+      "albumName": "Dear Dreams",
+      "duration": 204,
+      "createdAt": "2026-07-13T16:03:05.971Z",
+      "updatedAt": "2026-07-13T16:03:05.971Z"
+    },
+    {
+      "_id": "mrjevqlvsijl0",
+      "songName": "In Tune (J. Glaze Remix)",
+      "songDes": "By Kellee Maize",
+      "songImage": "https://usercontent.jamendo.com?type=album&id=139585&width=300&trackid=1161940",
+      "songPath": "https://prod-1.storage.jamendo.com/?trackid=1161940&format=mp31&from=amA%2FWkmdt4yIERa4OQBpkA%3D%3D%7CAAsi5yflMZEBZ6JgdNKinA%3D%3D",
+      "albumName": "The Remixes (2015)",
+      "duration": 346,
+      "createdAt": "2026-07-13T16:03:05.971Z",
+      "updatedAt": "2026-07-13T16:03:05.971Z"
+    },
+    {
+      "_id": "mrjevqlv66xpu",
+      "songName": "Energy",
+      "songDes": "By Pokki DJ",
+      "songImage": "https://usercontent.jamendo.com?type=album&id=135310&width=300&trackid=1129271",
+      "songPath": "https://prod-1.storage.jamendo.com/?trackid=1129271&format=mp31&from=OSiCcHtsQGU0N7hwxY3OVg%3D%3D%7CPZcp8kA6q5MBbPHfJky%2BIw%3D%3D",
+      "albumName": "Energy",
+      "duration": 230,
+      "createdAt": "2026-07-13T16:03:05.971Z",
+      "updatedAt": "2026-07-13T16:03:05.971Z"
+    },
+    {
+      "_id": "mrjevqlvngvc0",
+      "songName": "Music Soothe - Meditation Music",
+      "songDes": "By StimiBeats",
+      "songImage": "https://usercontent.jamendo.com?type=album&id=522038&width=300&trackid=2034080",
+      "songPath": "https://prod-1.storage.jamendo.com/?trackid=2034080&format=mp31&from=1DAJyn0s%2F6m7Wz%2BNonY3WQ%3D%3D%7C0F43G8KH%2Ff9W7%2BZW36oPqA%3D%3D",
+      "albumName": "Impression - Meditation Music",
+      "duration": 216,
+      "createdAt": "2026-07-13T16:03:05.971Z",
+      "updatedAt": "2026-07-13T16:03:05.971Z"
+    },
+    {
+      "_id": "mrjevqlv107if",
+      "songName": "You and Me",
+      "songDes": "By JekK",
+      "songImage": "https://usercontent.jamendo.com?type=album&id=138887&width=300&trackid=1157358",
+      "songPath": "https://prod-1.storage.jamendo.com/?trackid=1157358&format=mp31&from=%2BvI%2FwMkL6Sq8%2FC9K66WZ4Q%3D%3D%7CD18ZS623uq3ENckufM2azQ%3D%3D",
+      "albumName": "Dear Dreams",
+      "duration": 194,
+      "createdAt": "2026-07-13T16:03:05.971Z",
+      "updatedAt": "2026-07-13T16:03:05.971Z"
+    },
+    {
+      "_id": "mrjevqlv8818u",
+      "songName": "Survive",
+      "songDes": "By JekK",
+      "songImage": "https://usercontent.jamendo.com?type=album&id=159568&width=300&trackid=1353511",
+      "songPath": "https://prod-1.storage.jamendo.com/?trackid=1353511&format=mp31&from=rFmoBCYElKXY07CoTmE%2BjA%3D%3D%7CqLvj31aYF78qu210q%2F4F6A%3D%3D",
+      "albumName": "Roses",
+      "duration": 163,
+      "createdAt": "2026-07-13T16:03:05.971Z",
+      "updatedAt": "2026-07-13T16:03:05.971Z"
+    },
+    {
+      "_id": "mrjevqlvt03ak",
+      "songName": "Boys, Girls, Toys & Words",
+      "songDes": "By Modern Pitch",
+      "songImage": "https://usercontent.jamendo.com?type=album&id=140048&width=300&trackid=1165005",
+      "songPath": "https://prod-1.storage.jamendo.com/?trackid=1165005&format=mp31&from=4WVV3akOdxn%2F5Dnp9PL2IA%3D%3D%7Cj3Dsx8%2B4LL1V3M5hrdlFjw%3D%3D",
+      "albumName": "Eye Of The Storm",
+      "duration": 357,
+      "createdAt": "2026-07-13T16:03:05.971Z",
+      "updatedAt": "2026-07-13T16:03:05.971Z"
+    },
+    {
+      "_id": "mrjevqlv8gllz",
+      "songName": "Crazy Glue",
+      "songDes": "By Melanie Ungar",
+      "songImage": "https://usercontent.jamendo.com?type=album&id=292101&width=300&trackid=1480482",
+      "songPath": "https://prod-1.storage.jamendo.com/?trackid=1480482&format=mp31&from=uop8LlkjoDbl1kPdb1tsEw%3D%3D%7CKAKhyX1p9yJQ2RZuQyzkTQ%3D%3D",
+      "albumName": "Crazy Glue",
+      "duration": 220,
+      "createdAt": "2026-07-13T16:03:05.971Z",
+      "updatedAt": "2026-07-13T16:03:05.971Z"
+    },
+    {
+      "_id": "mrjevqlvzo4l9",
+      "songName": "Human Light",
+      "songDes": "By John Dada &amp; the Weathermen",
+      "songImage": "https://usercontent.jamendo.com?type=album&id=143735&width=300&trackid=1194315",
+      "songPath": "https://prod-1.storage.jamendo.com/?trackid=1194315&format=mp31&from=5868cbv9MU7S%2Fj2PhnWgxg%3D%3D%7CvvSlgiLZHd%2BInWOZgYvI2w%3D%3D",
+      "albumName": "folK.itUp",
+      "duration": 234,
+      "createdAt": "2026-07-13T16:03:05.971Z",
+      "updatedAt": "2026-07-13T16:03:05.971Z"
+    },
+    {
+      "_id": "mrjevqlvjs6n2",
+      "songName": "Strong",
+      "songDes": "By JekK",
+      "songImage": "https://usercontent.jamendo.com?type=album&id=175186&width=300&trackid=1528165",
+      "songPath": "https://prod-1.storage.jamendo.com/?trackid=1528165&format=mp31&from=ZGhUGf5HdaWxvu2thCtk%2Fg%3D%3D%7CQOcWA05lSrooUGfRtp24FQ%3D%3D",
+      "albumName": "Strong",
+      "duration": 187,
+      "createdAt": "2026-07-13T16:03:05.971Z",
+      "updatedAt": "2026-07-13T16:03:05.971Z"
+    },
+    {
+      "_id": "mrjevqlvjnzl2",
+      "songName": "We'll Light The Sky",
+      "songDes": "By Lyonn",
+      "songImage": "https://usercontent.jamendo.com?type=album&id=145856&width=300&trackid=1215788",
+      "songPath": "https://prod-1.storage.jamendo.com/?trackid=1215788&format=mp31&from=p1P%2BcpEyt%2FwEkqYZCp2T8w%3D%3D%7Cs66O9Pvolw4zBLsEPX381g%3D%3D",
+      "albumName": "We'll Light The Sky",
+      "duration": 168,
+      "createdAt": "2026-07-13T16:03:05.971Z",
+      "updatedAt": "2026-07-13T16:03:05.971Z"
+    },
+    {
+      "_id": "mrjevqlvbigwi",
+      "songName": "Sweet",
+      "songDes": "By Tamara Laurel",
+      "songImage": "https://usercontent.jamendo.com?type=album&id=134086&width=300&trackid=1122085",
+      "songPath": "https://prod-1.storage.jamendo.com/?trackid=1122085&format=mp31&from=BRkATvQjN2i4piIpi8BJxw%3D%3D%7CSCfBnu6CEH%2BN4YFfelEqeQ%3D%3D",
+      "albumName": "Lightning",
+      "duration": 214,
+      "createdAt": "2026-07-13T16:03:05.971Z",
+      "updatedAt": "2026-07-13T16:03:05.971Z"
+    },
+    {
+      "_id": "mrjevqlvhlpgu",
+      "songName": "Good Old Times",
+      "songDes": "By Alex Cohen",
+      "songImage": "https://usercontent.jamendo.com?type=album&id=257320&width=300&trackid=1436621",
+      "songPath": "https://prod-1.storage.jamendo.com/?trackid=1436621&format=mp31&from=Mghn%2FLxsnCU7bupI1U1roQ%3D%3D%7CdV9OI5VZZ%2F34sGULPmYf%2FQ%3D%3D",
+      "albumName": "Good Old Times",
+      "duration": 145,
+      "createdAt": "2026-07-13T16:03:05.971Z",
+      "updatedAt": "2026-07-13T16:03:05.971Z"
+    },
+    {
+      "_id": "mrjevqlvwggpj",
+      "songName": "Struttin'",
+      "songDes": "By Tryad",
+      "songImage": "https://usercontent.jamendo.com?type=album&id=3661&width=300&trackid=26736",
+      "songPath": "https://prod-1.storage.jamendo.com/?trackid=26736&format=mp31&from=XBoEQyCsacgB8ba6UQaTXQ%3D%3D%7ChCxoao3ewKBnwHEsDtL5iw%3D%3D",
+      "albumName": "Listen",
+      "duration": 242,
+      "createdAt": "2026-07-13T16:03:05.971Z",
+      "updatedAt": "2026-07-13T16:03:05.971Z"
+    },
+    {
+      "_id": "mrjevqlvoatw7",
+      "songName": "Skydiving (feat. Jasmine Kara)",
+      "songDes": "By Jonay",
+      "songImage": "https://usercontent.jamendo.com?type=album&id=46325&width=300&trackid=354778",
+      "songPath": "https://prod-1.storage.jamendo.com/?trackid=354778&format=mp31&from=vclwSkLkkxyLa2FPmlV5sA%3D%3D%7C21JPbvCWs8F1jD3pqpiFUw%3D%3D",
+      "albumName": "Skydiving",
+      "duration": 247,
+      "createdAt": "2026-07-13T16:03:05.971Z",
+      "updatedAt": "2026-07-13T16:03:05.971Z"
+    },
+    {
+      "_id": "mrjevqlvuvvg6",
+      "songName": "I Want You",
+      "songDes": "By Tamara Laurel",
+      "songImage": "https://usercontent.jamendo.com?type=album&id=121316&width=300&trackid=1031187",
+      "songPath": "https://prod-1.storage.jamendo.com/?trackid=1031187&format=mp31&from=6mUG28TE0Q0G%2B36f9FVH1A%3D%3D%7C2dBH18W%2BBOtg3NPgoyP4ig%3D%3D",
+      "albumName": "I Want You - Single",
+      "duration": 206,
+      "createdAt": "2026-07-13T16:03:05.971Z",
+      "updatedAt": "2026-07-13T16:03:05.971Z"
+    },
+    {
+      "_id": "mrjevqlv1vrfj",
+      "songName": "Possibilities",
+      "songDes": "By Jasmine Jordan",
+      "songImage": "https://usercontent.jamendo.com?type=album&id=147554&width=300&trackid=1230403",
+      "songPath": "https://prod-1.storage.jamendo.com/?trackid=1230403&format=mp31&from=%2FfdHyZkIUs20hS27AcikFg%3D%3D%7CLq2XkjLjaNHE035VGHRevQ%3D%3D",
+      "albumName": "Time Travel EP",
+      "duration": 210,
+      "createdAt": "2026-07-13T16:03:05.971Z",
+      "updatedAt": "2026-07-13T16:03:05.971Z"
+    },
+    {
+      "_id": "mrjevqlvlfwwe",
+      "songName": "I Want You",
+      "songDes": "By Neon NiteClub",
+      "songImage": "https://usercontent.jamendo.com?type=album&id=142959&width=300&trackid=1187780",
+      "songPath": "https://prod-1.storage.jamendo.com/?trackid=1187780&format=mp31&from=D7IW1nfbCj664kYvGnou2w%3D%3D%7CLaeh8zGqnxzTwbU7eE0HLw%3D%3D",
+      "albumName": "After Hours",
+      "duration": 248,
+      "createdAt": "2026-07-13T16:03:05.971Z",
+      "updatedAt": "2026-07-13T16:03:05.971Z"
+    },
+    {
+      "_id": "mrjevqlvl8vvu",
+      "songName": "Alone",
+      "songDes": "By Color Out",
+      "songImage": "https://usercontent.jamendo.com?type=album&id=455221&width=300&trackid=1886257",
+      "songPath": "https://prod-1.storage.jamendo.com/?trackid=1886257&format=mp31&from=ju6C7KMAdEceu54JBXMheg%3D%3D%7ChSQ2I2McT8mGQdjxLTwLqg%3D%3D",
+      "albumName": "Alone",
+      "duration": 245,
+      "createdAt": "2026-07-13T16:03:05.971Z",
+      "updatedAt": "2026-07-13T16:03:05.971Z"
+    },
+    {
+      "_id": "mrjevqlv0fiua",
+      "songName": "Alone",
+      "songDes": "By Tryad",
+      "songImage": "https://usercontent.jamendo.com?type=album&id=3661&width=300&trackid=26738",
+      "songPath": "https://prod-1.storage.jamendo.com/?trackid=26738&format=mp31&from=DcRkjH5dUFDo4Eq%2FXTaH9A%3D%3D%7C13luTtcOfWBNP8HZyYnojA%3D%3D",
+      "albumName": "Listen",
+      "duration": 256,
+      "createdAt": "2026-07-13T16:03:05.971Z",
+      "updatedAt": "2026-07-13T16:03:05.971Z"
+    },
+    {
+      "_id": "mrjevqlvbzx0a",
+      "songName": "Bad Chick",
+      "songDes": "By The.madpix.project",
+      "songImage": "https://usercontent.jamendo.com?type=album&id=132764&width=300&trackid=1111548",
+      "songPath": "https://prod-1.storage.jamendo.com/?trackid=1111548&format=mp31&from=mzt%2FyvkLo1gAEZJf4tB9jA%3D%3D%7CcN9fDDMAeqRdrWYli5J8iQ%3D%3D",
+      "albumName": "Bad Chick",
+      "duration": 300,
+      "createdAt": "2026-07-13T16:03:05.971Z",
+      "updatedAt": "2026-07-13T16:03:05.971Z"
+    }
+  ]
+}
